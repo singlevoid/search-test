@@ -1,0 +1,28 @@
+
+<form class="search-form"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      [formGroup]="searchForm">
+
+  <div class="search">
+    <input type="text"
+    formControlName="term"
+    placeholder="Search..."
+    [ngClass]="{'active': hasAnySuggestions()}"
+    (input)="getSearchSuggestions()"
+    (keyup.enter)="searchTerm(searchedTerm)"
+    autofocus>
+
+    <app-suggestions *ngIf="suggestions"
+                     [suggestions]="suggestions"
+                     [term]="searchedTerm"
+                     (suggestionClicked)="searchTerm($event)"
+                     ></app-suggestions>
+
+  </div>
+
+  <p *ngIf="term">Searching for <span style="font-weight: bold;">{{term}}</span></p>
+
+</form>

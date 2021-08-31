@@ -1,0 +1,14 @@
+.suggestions-terms{
+  border: 1px solid #b8b8b8;
+  border-top: 0px;
+  position: absolute;
+  text-align: left;
+  width: auto;
+  display: block;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 0px 0px 20px 20px;
+  overflow: hidden;
+}

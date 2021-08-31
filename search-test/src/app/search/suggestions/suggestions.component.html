@@ -1,0 +1,8 @@
+<div class="suggestions-terms" *ngIf="hasAnySuggestion()">
+
+  <app-suggestions-row  *ngFor="let suggestion of suggestions.suggestions"
+                        [suggestion]="suggestion"
+                        [term]="term"
+                        (click)="searchTerm(suggestion)"
+                        ></app-suggestions-row>
+</div>
